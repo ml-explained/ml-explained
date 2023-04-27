@@ -32,6 +32,7 @@ extensions = [
     'sphinx_rtd_theme',
     'sphinx.ext.mathjax',
     'sphinx.ext.autosectionlabel',
+    'sphinxcontrib.pseudocode',
     'sphinx_copybutton',
     'numpydoc',
     'sphinx_click.ext'
@@ -53,7 +54,7 @@ source_suffix = ['.rst', '.md']
 
 
 project = "ML-Explained"
-author = "ML-Explained "
+author = "ML-Explained"
 copyright = f"{datetime.datetime.now().year}, {author}"
 version = release = "0.0.1"
 
@@ -88,7 +89,8 @@ html_style = 'css/custom.css'
 
 numfig = True
 numfig_secnum_depth = 2
-
+math_numfig = True
+math_eqref_format = "Eq. {number}"
 html_favicon = 'favicon.png'
 
 pngmath_latex_preamble=r'\usepackage[active]{preview}' # + other custom stuff for inline math, such as non-default math fonts etc.

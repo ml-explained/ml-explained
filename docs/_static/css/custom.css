@@ -4,6 +4,14 @@
     max-width: none;
 }
 
+p {
+    text-align: justify;
+}
+
+.eqno {
+    float: right;
+}
+
 /* .rst-content .code .admonition-title {
     background: #6A6A6A
 }
