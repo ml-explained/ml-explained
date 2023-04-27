@@ -6,8 +6,14 @@ Gradient Descent
 
 The method of Gradient Descent (also known as Steepest Descent) considers only the current gradient when choosing the search direction :math:`\mathbf{p}_k`. 
 This method can be thought of as being *memoryless* as it does not utilise the history of search directions taken i.e. :math:`\mathbf{p}_1,...,\mathbf{p}_{k-1}`. 
-By differentiating the quadratic loss function, :math:`\mathcal{L}(\mathbf{x}_{k}):=\mathbf{x}_k^\text{T}\mathbf{Ax}_k - \mathbf{x}_k^\text{T}\mathbf{b}`, we 
-know the minimum is achieved when :math:`\mathbf{A}\mathbf{x}_{k} = \mathbf{b}`. By using the negative gradient, :math:`\mathbf{r}_k:=\mathbf{b} - \mathbf{Ax}_k`, 
+By differentiating the quadratic loss function, 
+
+
+.. math::
+    
+    \phi(\mathbf{x}):= \frac{1}{2}\mathbf{x}^\text{T}\mathbf{Ax} - \mathbf{x}^\text{T}\mathbf{b}
+    
+we know the minimum is achieved when :math:`\mathbf{A}\mathbf{x} = \mathbf{b}`. By using the negative gradient, :math:`\mathbf{r}(\mathbf{x}):=\mathbf{b} - \mathbf{Ax}`, 
 we can choose a sufficiently small learning rate, :math:`\alpha` for the problem to converge. By additionally defining some convergence threshold, 
 :math:`\tau>0` and the maximum number of iterations, :math:`K`, the gradient descent algorithm for a linear system is defined below.
 
@@ -39,7 +45,7 @@ we can determine the optimal learning rate at every iteration step.
 Determining the Optimal Learning Rate
 =====================================
 
-Here we determine the optimal learning rate :math:`\alpha_k` by considering the following functional:
+Here we determine the optimal learning rate :math:`\alpha_k` by analysing the quadratic loss function:
 
 .. math::
 
