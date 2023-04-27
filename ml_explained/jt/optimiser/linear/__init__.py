@@ -1,13 +1,13 @@
 import numpy as np
 
-def gradient_descent(A, b, x0, alpha = 'auto', tau = 1e-8, max_iter = 100, track = False, **kwargs):
+def gradient_descent(A, b, x0, alpha = 'optimal', tau = 1e-8, max_iter = 100, track = False, **kwargs):
     """
     Gradient Descent 
     ================
 
     Gradient Descent Optimiser for a System of Linear Equations.
 
-    See ml-explained.readthedocs.io/en/latest/theories/linear-optimisation/gradient-descent.html for more details.
+    See https://ml-explained.readthedocs.io/en/latest/theories/linear-optimisation/gradient-descent.html for more details.
 
     Parameters
     ----------
@@ -57,7 +57,7 @@ def conjugate_gradient(A, b, x0, tau = 1e-8, max_iter = 100, restart = 'auto', t
 
     Conjugate Gradient Descent Optimiser for a System of Linear Equations.
 
-    See ml-explained.readthedocs.io/en/latest/theories/linear-optimisation/conjugate-gradient.html for more details.
+    See https://ml-explained.readthedocs.io/en/latest/theories/linear-optimisation/conjugate-gradient.html for more details.
 
     Parameters
     ----------
